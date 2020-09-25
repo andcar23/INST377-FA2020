@@ -1,6 +1,6 @@
 
 body {
-    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+    font: normal 18px/1.5 "Lucida Console", Monaco, monospace;
     background: #26bace; 
     color: rgb(49, 43, 43);  
     padding: 50px 0;
@@ -81,35 +81,17 @@ body {
     border: none;
   }
   
-  .flex-inner li button {
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
-  }
   
   .flex-inner li {
     width: 80px;
   }
   
-  .button {
-    margin-left: 0;
-    padding: 6px 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 3px;
-  }
-
   button {
     margin-left: 0;
     padding: 6px 12px;
-    text-transform: uppercase;
     letter-spacing: 1.2px;
     border-radius: 3px;
+    text-transform: uppercase;
   }
 
 
