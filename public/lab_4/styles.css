@@ -96,7 +96,13 @@ body {
     width: 80px;
   }
   
-
+  .button {
+    margin-left: 0;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 3px;
+  }
 
 
 
