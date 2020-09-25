@@ -2,7 +2,7 @@
 body {
     font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
     background: #26bace;
-    color: rgb(160, 147, 147);
+    color: rgb(0, 0, 0);
     padding: 50px 0;
   }
   
@@ -100,23 +100,4 @@ body {
 
 
 
-  
-  .button {
-    /* Align buttons with the text fields */
-    margin-left: 0;
-    padding: 6px 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 3px;
-  }
-  
-  button {
-    /* This extra margin represent roughly the same space as the space
-       between the labels and their text fields */
-    margin-left: 0;
-    padding: 6px 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 3px;
-  
-  }
+ 
