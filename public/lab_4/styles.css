@@ -2,7 +2,7 @@
 body {
     font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
     background: #26bace; 
-    color: rgb(0, 0, 0);  
+    color: rgb(49, 43, 43);  
     padding: 50px 0;
   }
   
@@ -97,6 +97,14 @@ body {
   }
   
   .button {
+    margin-left: 0;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 3px;
+  }
+
+  button {
     margin-left: 0;
     padding: 6px 12px;
     text-transform: uppercase;
