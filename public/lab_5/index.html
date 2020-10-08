@@ -7,7 +7,7 @@
     </head>
 
 <body>
-    <h1 class=center>Andrew Carroll's Lab 4</h1>
+    <h1 class=center>Lab 5</h1>
 
         <div class="container">
 
@@ -51,7 +51,7 @@
 
                 <!-- Age Checkboxes-->
                 <li>
-                    <p>Age</p>
+                    <p class = "checkbox-list-label">Age</p>
 
                     <ul class = "flex-inner">
 
@@ -89,13 +89,31 @@
              </ul>
         </form>
     </div>
-    function testFunction() {
+
+
+
+<!--Start of JS Code-->
+    <script>
+        /* Test function provided*/
+
+         function testFunction() {
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
              console.log(response);
         })
    }
+
+        /*Random Background Color*/
+        const randCol = 'rgb(' + rand(255) + ',' + rand(255) + ','
+        + rand(255) + ')';
+        document.body.style = randCol;
+
+
+
+    </script>
+   
+   
 </body>
 </html>
 
