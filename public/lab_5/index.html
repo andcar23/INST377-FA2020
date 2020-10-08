@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
       <meta name = "author" content ="Andrew Carroll">
-      <title>Andrew Carroll Lab 4</title>
+      <title>Andrew Carroll Lab 5</title>
       <link rel = "stylesheet" type = "text/css" href ="styles.css">
     </head>
 
 <body>
-    <h1 class=center>Lab 5</h1>
+    <h1 class=center>Andrew Carroll Lab 4</h1>
 
         <div class="container">
 
@@ -78,12 +78,14 @@
 
                     <!--Submit Button-->
                     <li>
-                        <button type="submit" id = "SubButton" name = "SubmitButton">Submit Form</button>
+                        <button type="submit" id = "SubButton" name = "SubmitButton" 
+                        onclick = "testFunction()">Submit Form</button>
                     </li>
 
                     <!--Activate-->
                     <li>
-                        <button type="button" id = "ActButton" name = "ActButton">Activate</button>
+                        <button type="button" id = "ActButton" name = "ActButton"
+                        onclick = "testFunction()">Activate</button>
                     </li>
             
              </ul>
@@ -107,7 +109,7 @@
         /*Random Background Color*/
         const randCol = 'rgb(' + rand(255) + ',' + rand(255) + ','
         + rand(255) + ')';
-        document.body.style = randCol;
+        document.body.style.background = randCol;
 
 
 
