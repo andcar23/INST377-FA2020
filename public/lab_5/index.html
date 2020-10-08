@@ -122,12 +122,26 @@
             fruitLabel.textContent = 'Fruits';
 
             /*Change checkbox context*/
-            let fruitArr = ["Apple", "Banana", "Orange"];
-            let checkbox = document.querySelectorAll('.checkbox');
-        
-            for(let i = 0; i < checkbox.length; i++) {
-                
-                checkbox[i].innerHTML = "Apple";
+            function changeCheckbox(){
+                const elements = document.querySelectorAll('flex-inner li label');
+                var fruitArr = ["Apple", "Banana", "Orange"];
+                elements.forEach((el) => {
+                    const text = el.innterText;
+                    console.log(text);
+                    el = fruitArr[i];
+                }
+
+                )
+            }
+            
+            
+            var checkbox =  document.querySelectorAll('.flex-inner li label');
+            var checkboxes = Array.from(checkbox);
+           
+
+            
+            for(let i = 0; i < checkboxes.length; i++) {
+               checkboxes[i].innerText = fruitArr[i];
             } 
 
                 })
