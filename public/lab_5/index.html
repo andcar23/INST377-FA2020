@@ -7,7 +7,7 @@
     </head>
 
 <body>
-    <h1 class=center>Andrew Carroll Lab 4</h1>
+    <h1 class=center>Andrew Carroll's Lab 4</h1>
 
         <div class="container">
 
@@ -98,19 +98,50 @@
     <script>
         /* Test function provided*/
 
-         function testFunction() {
-        fetch('/api')
-        .then((response) => response.text())
-        .then((response) => {
-             console.log(response);
-        })
-   }
+        function testFunction() {
+            fetch('/api')
+            .then((response) => response.text())
+            .then((response) => {
+                console.log(response);
+            
+             /*Random Background Color*/
+            const randCol = 'rgb(' + random(255) + ',' + random(255) + ','
+            + random(255) + ')';
+            document.body.style.background = randCol;
 
-        /*Random Background Color*/
-        const randCol = 'rgb(' + rand(255) + ',' + rand(255) + ','
-        + rand(255) + ')';
-        document.body.style.background = randCol;
+            /*Change Header*/
+            let myHeader = document.querySelector('h1');
+            myHeader.textContent = 'Lab 5 for Andrew Carroll';
 
+            /*Change Title*/
+            let myTitle = document.querySelector('title');
+            myTitle.textContent = 'Lab 5 for Andrew Carroll';
+
+            /*Age -> Fruit Name Change*/
+            let fruitLabel = document.querySelector('p');
+            fruitLabel.textContent = 'Fruits';
+
+            /*Change checkbox context*/
+            let fruitArr = ["Blueberry", "Strawberry", "Banana"];
+            const checkbox = document.querySelectorAll('checkbox');
+        
+            for (let i = 0; i < checkbox.length, i++) {
+               checkbox[i].textContent = fruitArr[i]; 
+            }
+                })
+        }
+
+       
+
+  /* End of test function */
+
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+
+        /* Random Function */
+        function random(number) {
+        return Math.floor(Math.random() * (number+1));
+        }
 
 
     </script>
