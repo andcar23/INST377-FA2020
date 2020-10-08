@@ -77,14 +77,13 @@ body {
   .flex-outer li input:not([type='checkbox']),
   .flex-outer li textarea {
     margin-left: 0px;
-
     padding: 15px;
     border: none;
   }
   
   
   .flex-inner li {
-    width: 80px;
+    width: 95px;
   }
   
   button {
