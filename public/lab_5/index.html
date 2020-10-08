@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
       <meta name = "author" content ="Andrew Carroll">
-      <title>Andrew Carroll Lab 5</title>
+      <title>Andrew Carroll's Lab 4</title>
       <link rel = "stylesheet" type = "text/css" href ="styles.css">
     </head>
 
@@ -25,7 +25,7 @@
                 <li>
                     <label for="lname">Last Name</label>
                     <input name = 'last name' type="text" id="lname"
-                    placeholder = "Enter last name" maxlength="140" >
+                    placeholder = "Enter last name" maxlength="140">
                 </li>
 
                 <!--Email-->
@@ -53,7 +53,7 @@
                 <li>
                     <p class = "checkbox-list-label">Age</p>
 
-                    <ul class = "flex-inner">
+                    <ul class="flex-inner">
 
                         <!-- 18-35 Checkbox -->
                         <li>
@@ -122,23 +122,18 @@
             fruitLabel.textContent = 'Fruits';
 
             /*Change checkbox context*/
-            let fruitArr = ["Blueberry", "Strawberry", "Banana"];
-            const checkbox = document.querySelectorAll('checkbox');
+            let fruitArr = ["Apple", "Banana", "Orange"];
+            var checkbox = document.querySelectorAll('.checkbox');
         
-            for (let i = 0; i < checkbox.length, i++) {
-               checkbox[i].textContent = fruitArr[i]; 
-            }
+            for(var i = 0; i < checkbox.length; i++) {
+                
+                checkbox[i].innerHTML = "Apple";
+            } 
+
                 })
         }
 
-       
-
-  /* End of test function */
-
-        const fname = document.getElementById('fname');
-        const lname = document.getElementById('lname');
-
-        /* Random Function */
+        /* Random Number Function */
         function random(number) {
         return Math.floor(Math.random() * (number+1));
         }
