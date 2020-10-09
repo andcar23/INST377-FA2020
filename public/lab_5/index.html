@@ -122,29 +122,24 @@
             fruitLabel.textContent = 'Fruits';
 
             /*Change checkbox context*/
-            function changeCheckbox(){
-                const elements = document.querySelectorAll('flex-inner li label');
-                var fruitArr = ["Apple", "Banana", "Orange"];
-                elements.forEach((el) => {
+            let fruitArr = ["Apple", "Banana", "Orange"];
+            const CBelements = document.querySelectorAll('.flex-inner li label');
+
+            CBelements.forEach((el, i) => {
                     const text = el.innterText;
-                    console.log(text);
-                    el = fruitArr[i];
-                }
-
-                )
-            }
-            
-            
-            var checkbox =  document.querySelectorAll('.flex-inner li label');
-            var checkboxes = Array.from(checkbox);
-           
-
-            
-            for(let i = 0; i < checkboxes.length; i++) {
-               checkboxes[i].innerText = fruitArr[i];
-            } 
-
+                    console.log(el);
+                    el.innerText = fruitArr[i];
                 })
+
+            /*Center Form*/
+            const center = document.getElementsByClassName(".flex-outer");
+            center.style.margin = "margin: 0 auto";
+            
+                
+            })
+            
+
+                
         }
 
         /* Random Number Function */

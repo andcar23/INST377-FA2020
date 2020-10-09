@@ -3,13 +3,14 @@ body {
     font: normal 18px/1.5 "Lucida Console", Monaco, monospace;
     background: #7c2727; 
     color: rgb(0, 0, 0); 
-    text-align: center; 
+
     padding: 50px 0;
   }
   
   .container {
     width: 80%;
     max-width: 1200px;
+    text-align: center; 
     margin: 0 auto;
   }
   
@@ -96,8 +97,5 @@ body {
     text-transform: uppercase;
   }
 
-  .checkbox-list-label{
-    font-size: large;
-  }
 
  
