@@ -29,13 +29,20 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-// Start of my Lab Code 
+      // Start of my Lab Code 
+
+      // Random Number Function
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+}
 // Question 10
       // Create an empty array of 10 elements
       const Arr = range(10);
 
       const CountArr = Arr.map(() => {
-        const randNum = getRandomInt(244);
+        const randNum = getRandomInt(0, 244);
         console.log(fromServer[randNum.name]);
         return fromServer[randNum];
       });
