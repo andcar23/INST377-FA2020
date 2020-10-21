@@ -36,8 +36,8 @@ document.body.addEventListener('submit', async (e) => {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min);
-}
-// Question 10
+      }
+      // Question 10
       // Create an empty array of 10 elements
       const Arr = range(10);
 
