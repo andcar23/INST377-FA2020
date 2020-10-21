@@ -29,7 +29,26 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
+// Start of my Lab Code 
+// Question 10
+      // Create an empty array of 10 elements
+      const Arr = range(10);
+
+      const CountArr = Arr.map(() => {
+        const randNum = getRandomInt(244);
+        console.log(fromServer[randNum.name]);
+        return fromServer[randNum];
+      });
+
+      // Question 11 Reverse Alphabetical Order
+      const revArr = CountArr.sort((a, b) => sortFunction(b, a, 'name'));
+
+      // Question 12: Injecting Ordered List element w/ classname "flex-inner"
+      const olist = document.createElement('ol');
+      ol.ClassName = 'flex-inner';
+      $('form').prepend(olist);
+
+      // Question 13
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
