@@ -1,10 +1,9 @@
+
 // You may wish to find an effective randomizer function on MDN.
 
 // Random Number Function
-function getRandomInt(min, max) {
-  min1 = Math.ceil(min);
-  max1 = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 // Range Function
@@ -25,6 +24,7 @@ function sortFunction(a, b, key) {
   }
   return 0;
 }
+
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
@@ -38,7 +38,7 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // Start of my Lab Code 
-      // No. 14
+      // Question 14: Remove list from website when button is clicked
       if (document.querySelector('.flex-inner')) {
         document.querySelector('.flex-inner').remove();
       }
@@ -47,24 +47,36 @@ document.body.addEventListener('submit', async (e) => {
       // Create an empty array of 10 elements
       const Arr = range(10);
       const CountArr = Arr.map(() => {
-        const randNum = getRandomInt(0, 243);
-        return fromServer[randNum];
+        const ranNum = getRandomInt(244);
+        return fromServer[ranNum];
       });
 
       // Question 11 Reverse Alphabetical Order
       const revArr = CountArr.sort((a, b) => sortFunction(b, a, 'name'));
 
-      // Question 12: Injecting Ordered List element w/ classname "flex-inner"
-      const olist = document.createElement('olist');
-      olist.ClassName = 'flex-inner';
-      $('form').prepend(olist);
+      // Question 12
+      const oList = document.createElement('ol');
+      oList.className = 'flex-inner';
 
-      // Question 13
+      $('form').prepend(oList);
+
+      const Flex = document.querySelector('.flex-inner');
+
       revArr.forEach((element) => {
-        const list = document.createElement('list');
-        $(list).append(`<input type="checkbox" value=${element.code} id=${element.code}>`);
-        $(list).append(`<label for=${element.code}>${element.name}</label>`);
-        $(olist).append(list);
+        const List = Flex.appendChild(document.createElement('li'));
+        const checkBox = document.createElement('input');
+        checkBox.setAttribute('type', 'checkbox');
+        checkBox.setAttribute('id', `${element.code}`);
+        checkBox.setAttribute('value', `${element.code}`);
+        checkBox.setAttribute('name', `${element.name}`);
+
+        const Label = document.createElement('label');
+        Label.setAttribute('for', `${element.code}`);
+        Label.innerText = `${element.name}`;
+
+        List.appendChild(checkBox);
+        List.appendChild(Label);
+        $(oList).append(List);
       });
       console.log('fromServer', fromServer);
     })
