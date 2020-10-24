@@ -38,6 +38,10 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // Start of my Lab Code 
+      // No. 14
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-inner').remove();
+      }
 
       // Question 10
       // Create an empty array of 10 elements
