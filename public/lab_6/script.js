@@ -1,5 +1,13 @@
 // You may wish to find an effective randomizer function on MDN.
 
+// Random Number Function
+function getRandomInt(min, max) {
+  min1 = Math.ceil(min);
+  max1 = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+// Range Function
 function range(int) {
   const arr = [];
   for (let i = 0; i < int; i += 1) {
@@ -8,6 +16,7 @@ function range(int) {
   return arr;
 }
 
+// Sort Function
 function sortFunction(a, b, key) {
   if (a[key] < b[key]) {
     return -1;
@@ -16,7 +25,6 @@ function sortFunction(a, b, key) {
   }
   return 0;
 }
-
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
@@ -31,19 +39,11 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => {
       // Start of my Lab Code 
 
-      // Random Number Function
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
-      }
       // Question 10
       // Create an empty array of 10 elements
       const Arr = range(10);
-
       const CountArr = Arr.map(() => {
-        const randNum = getRandomInt(0, 244);
-        console.log(fromServer[randNum.name]);
+        const randNum = getRandomInt(0, 243);
         return fromServer[randNum];
       });
 
@@ -51,11 +51,17 @@ document.body.addEventListener('submit', async (e) => {
       const revArr = CountArr.sort((a, b) => sortFunction(b, a, 'name'));
 
       // Question 12: Injecting Ordered List element w/ classname "flex-inner"
-      const olist = document.createElement('ol');
-      ol.ClassName = 'flex-inner';
+      const olist = document.createElement('olist');
+      olist.ClassName = 'flex-inner';
       $('form').prepend(olist);
 
       // Question 13
+      revArr.forEach((element) => {
+        const list = document.createElement('list');
+        $(list).append(`<input type="checkbox" value=${element.code} id=${element.code}>`);
+        $(list).append(`<label for=${element.code}>${element.name}</label>`);
+        $(olist).append(list);
+      });
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
