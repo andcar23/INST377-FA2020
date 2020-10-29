@@ -26,6 +26,29 @@ body {
 }
 
 /* Enter YOUR lab styles after this line */
+.wrapper {
+
+}
+
+.container, .flex-outer {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+}
 .flex-outer li,
 .flex-inner {
   display: flex;
