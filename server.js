@@ -26,11 +26,11 @@ app.route('/api')
   .get((req, res) => {
     console.log('GET request detected');
     res.send('Lab 5 for Andrew Carroll');
-  }) // start lecture at 21:32
+  }) // start lecture at 28:44
   .post(async (req, res) => {
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
     console.log('POST request detected');
-    console.log('Form data in res.body', req.body);
+    console.log('Fetch request data', data);
     res.json(countries);
   });
 
