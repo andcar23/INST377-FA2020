@@ -29,6 +29,7 @@ app.route('/api')
   }) // start lecture at 28:44
   .post(async (req, res) => {
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
+    const json = await data.json
     console.log('POST request detected');
     console.log('Fetch request data', data);
     res.json(countries);
